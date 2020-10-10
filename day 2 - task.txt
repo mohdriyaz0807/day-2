@@ -1,0 +1,69 @@
+1.	Copy by value in composite data type:
+
+let arr = {name : jon}	
+let arr2 = JSON.parse(JSON.stringify(arr))
+This method called Deep copying used for copy by value in composite data types, else it will copy by reference for objects.
+
+2.	Difference in behaviour when copying contents in primitive and non-primitive data types
+
+Non primitive : It includes Arrays, Functions as Objects, copy by reference only. If all the data type and values are strictly equal, that is doesn’t mean equal. They are equal only they refer to same underlying object. So modifying changes in the new variable affects the old variable. To use copy by value in non-primitive use Deep copy method.
+
+Primitive: It always copy by values and two variables are strictly equal if they have same data type. And it doesn’t change old variable when modify the new variable.
+Eg: Shallow copy method
+
+3.	Typeof() in all datatypes:
+
+typeof(1) - "number"
+typeof(1.1) - "number"
+typeof("1.1") - "string"
+typeof(true) - "boolean"
+typeof(null) - "object"
+typeof(undefined) - "undefined"
+typeof([]) - "object"
+typeof({}) - "object"
+
+
+4.	Objects and its internal representation in javascript:
+ Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types. It will be in the form of “key: value” pairs where a key is a string (also called a “property name”), and value can be anything.
+let school = {
+name: ‘Vivekananda School’,
+location : ‘Delhi’,
+established : ‘1971’,
+20 : 1000,
+displayInfo : function(){
+console.log(The value of the key 20 is ${school[‘20’]});
+}
+}
+school.displayInfo();
+
+5.	CLI commands
+
+cd or chdir							Displays the name of the current directory or changes the current folder
+chkdsk							Checks hard drives for errors. With switches,does repairs.
+cls							Clears the screen	
+copy							Copies a file from one location to another
+del							Deletes one or more files
+dir							Displays a list of a folder's files and subfolders	
+echo							Used to display a message or to turn off/on messages in batch scripts
+exit							Exits batch script or current command control
+ipconfig							Displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings
+md or mkdir							Creates a directory (folder) or subdirectory (subfolder)	
+path							Sets the command path in the PATH environment variable, which is the set of directories used to search for executable files
+ping							Checks connectivity to other networked computers, routers, or Internet sites
+rd or rmdir							Deletes a directory (folder)
+set							Displays, sets, or removes environment variables
+shutdown							Shuts down or restarts a computer
+
+6.	Difference between window, screen and document in javascript:
+•	Window is the main JavaScript object root, aka the global object in a browser, also can be treated as the root of the document object model. You can access it as window
+•	window.screen or just screen is a small information object about physical screen dimensions.
+•	window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
+•	Since window is the global object you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
+
+7. flag url in rest countries API
+
+var arr = rest.countries
+for(var i in arr)
+{
+    console.log(arr[i].flag)
+}
