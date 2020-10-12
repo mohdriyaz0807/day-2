@@ -1,0 +1,309 @@
+0. Playing with JSON object’s Values:
+part - A
+
+var cat = {
+ name: ‘Fluffy’,
+ activities: [‘play’, ‘eat cat food’],
+ catFriends: [
+ {
+ name: ‘bar’,
+ activities: [‘be grumpy’, ‘eat bread omblet’],
+ weight: 8,
+ furcolor: ‘white’
+ }, 
+ {
+ name: ‘foo’,
+ activities: [‘sleep’, ‘pre-sleep naps’],
+ weight: 3
+ }
+ ]
+}
+console.log(cat);
+
+cat.height=5;
+cat.weight=7;
+
+cat.name=Fluffyy;
+
+console.log(cat.catFriends[0].activities,cat.catFriends[1].activities)
+
+console.log(cat.catFriends[0].name,cat.catFriends[1].name)
+
+console.log(cat.catFriends[0].weight + cat.catFriends[1].weight)
+
+console.log(cat.activities,cat.catFriends[0].activities,cat.catFriends[1].activities)
+
+var act = happy cry,angry yelling
+act.split(",")
+for(i=0;i<act.length;i++)
+cat.catfriends.activities[i].push(act[i])
+
+cat.catFriends[0].furcolor = black;
+
+
+0.Part B
+
+var myCar = {
+ make: ‘Bugatti’,
+ model: ‘Bugatti La Voiture Noire’,
+ year: 2019,
+ accidents: [
+ {
+ date: ‘3/15/2019’,
+ damage_points: ‘5000’,
+ atFaultForAccident: true
+ },
+ {
+ date: ‘7/4/2022’,
+ damage_points: ‘2200’,
+ atFaultForAccident: true
+ },
+ {
+ date: ‘6/22/2021’,
+ damage_points: ‘7900’,
+ atFaultForAccident: true
+ }
+ ]
+}
+
+for(var i=0;i<accidents.length;i++)
+{
+myCar.accidents[i].atFaultForAccident=false
+}
+
+for(var i=0;i<accidents.length;i++)
+{
+console.log(myCar.accidents[i].date)
+}
+
+
+
+1.
+var obj = {name :"RajiniKanth", age : 33, hasPets : false};
+
+var v=[]
+;
+function printAllValues()
+ {
+
+    
+for(x in obj)
+{
+    
+v.push(obj[x])
+    
+}
+    
+console.log(v)
+
+}
+
+printAllValues();
+
+2.
+var obj = {name :"RajiniKanth", age : 33, hasPets : false};
+
+var v=[]
+;
+function printAllValues()
+ {
+
+    
+for(x in obj)
+{
+    
+v.push(x)
+    
+}
+    
+console.log(v)
+
+}
+
+printAllValues();
+
+3.
+var obj = {name: 'ISRO', age: 35, role: 'Scientist'},u=[];
+
+function convertListToObject()
+ {
+
+for(x in obj)
+
+{
+
+var v=[]
+;
+v.push(x,obj[x])
+
+u.push(v)
+
+}
+
+console.log(u)
+
+
+}
+
+ convertListToObject();
+
+4.
+var arr = ['GUVI', 'I', 'am', 'a geek'];
+
+function transformFirstAndLast()
+
+{
+
+var newObject = {}
+
+newObject[arr[0]]=arr[arr.length-1]
+
+console.log(newObject)
+}
+
+
+transformFirstAndLast();
+
+5.
+var arr = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]];
+
+function fromListToObject()
+
+{
+
+var newObject = {}
+
+for(i=0;i<arr.length;i++)
+{
+
+newObject[arr[i][0]]=arr[i][1]
+
+}
+
+console.log(newObject)
+
+
+}
+
+
+fromListToObject();
+
+6.
+var arr= [[['firstName', 'Vasanth'], ['lastName', 'Raja'], ['age', 24], ['role', 'JSWizard']], [['firstName', 'Sri'], ['lastName', 'Devi'], ['age', 28], ['role', 'Coder']]];
+
+
+function transformEmployeeData()
+
+{
+ 
+var t = [];
+for(i=0;i<arr.length;i++)
+
+{
+
+var obj=Object.fromEntries(arr[i]);
+
+t.push(obj)
+
+}
+
+console.log(t)
+
+}
+
+transformEmployeeData()
+
+7.
+var expected = {foo: 5, bar: 6};
+
+var actual = {foo: 5, bar: 6}
+
+function assertObjectsEqual()
+{
+ 
+var a=JSON.stringify(actual);
+ 
+var e=JSON.stringify(expected);
+ 
+if(a===e)
+ 
+{
+ 
+console.log('PASSED')
+
+ }
+ 
+else
+ 
+{
+ 
+console.log('FAILED [my test] Expected '+ e +'but got' + a)
+ 
+}
+
+}
+
+assertObjectsEqual()
+
+8.
+var securityQuestions = [
+    {
+    question: 'What was your first pet’s name?',
+    expectedAnswer: 'FlufferNutter'
+    },
+    {
+    question: 'What was the model year of your first car?',
+    expectedAnswer: '1985'
+    },
+    {
+    question: 'What city were you born in?',
+    expectedAnswer: 'NYC'
+    }
+   ]
+   function chksecurityQuestions() {
+   var status=''
+   //Test case1:
+   var ques = 'What was your first pet’s name?';
+   var ans  =  'FlufferNutter';
+   for(var i in securityQuestions){
+   if(securityQuestions[i]['question']==ques&&securityQuestions[i]['expectedAnswer']==ans){
+   status = true;
+   break;}
+   else{
+   status=false;
+   }}
+   console.log(status)
+   //Test case2:
+   var ques = 'What was your first pet’s name?';
+   var ans  =  'DufferNutter';
+   for(var i in securityQuestions){
+   if(securityQuestions[i]['question']==ques&&securityQuestions[i]['expectedAnswer']==ans){
+   status = true;
+   break;}
+   else{
+   status=false;
+   }}
+   console.log(status);
+   }
+   chksecurityQuestions();
+
+9.
+var students = [
+    {name: 'Siddharth Abhimanyu', age: 21}, { name: 'Malar', age: 25},
+    {name: 'Maari',age: 18},{name: 'Bhallala Deva',age: 17},
+    {name: 'Baahubali',age: 16},{name: 'AAK chandran',age: 23},   {name:'Gabbar Singh',age: 33},{name: 'Mogambo',age: 53},
+    {name: 'Munnabhai',age: 40},{name: 'Sher Khan',age: 20},
+    {name: 'Chulbul Pandey',age: 19},{name: 'Anthony',age: 28},
+    {name: 'Devdas',age: 56} 
+    ];
+   function returnMinors()
+   {
+       var arr=[]
+       for(var i in students){
+           if(students[i].age<20){
+               arr.push(students[i].name)
+           }
+       }
+       console.log(arr)
+   }
+  returnMinors();
